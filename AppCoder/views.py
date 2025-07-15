@@ -1,5 +1,7 @@
-from django.shortcuts import render, get_object_or_404
+from django.shortcuts import render
 from .models import Amigo, Tutor
+
+#1 get_object_or_404
 
 # Create your views here.
 
