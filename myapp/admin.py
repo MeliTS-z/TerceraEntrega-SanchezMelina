@@ -2,8 +2,8 @@ from django.contrib import admin
 
 # Register your models here.
 
-# from .models import Amigo, Tutor
+from .models import Amigo
 
-# register_models = [Amigo, Tutor]
+register_models = [Amigo]
 
-# admin.site.register(register_models)
+admin.site.register(register_models)
