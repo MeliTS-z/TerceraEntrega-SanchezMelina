@@ -1,10 +1,10 @@
 from django.urls import path
 
 #include
-from .views import index
+from .views import landing
 
 urlpatterns = [
-    path('myapp/', index),
+    path('myapp/', landing),
 ]
 
 #path('admin/', admin.site.urls),
