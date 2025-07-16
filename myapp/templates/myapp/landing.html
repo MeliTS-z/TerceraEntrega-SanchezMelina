@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Encontradog</title>
+    <style>
+        /* Colores inspirados en Capibara: */
+        /* Marrón suave (piel): #b8860b (dark goldenrod) - un poco más oscuro y terroso */
+        /* Beige claro (barriga): #f5deb3 (wheat) */
+        /* Verde agua/azul claro (entorno acuático): #87ceeb (sky blue) o #b0e0e6 (powder blue) */
+        /* Tono arena/tierra: #d2b48c (tan) */
+        /* Texto oscuro: #4a382c */
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            background: linear-gradient(135deg, #d2b48c 0%, #b8860b 100%); /* Degradado de tierra a piel de capibara */
+            color: #4a382c; /* Texto oscuro, como el pelaje */
+            text-align: center;
+        }
+
+        .container {
+            background-color: #f5deb3; /* Beige claro para el fondo del contenedor (barriga de capibara) */
+            padding: 40px 60px;
+            border-radius: 15px;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.15); /* Sombra un poco más pronunciada */
+            max-width: 800px;
+            width: 90%;
+            animation: fadeIn 1s ease-out;
+            border: 2px solid #b8860b; /* Borde sutil del color de piel */
+        }
+
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+                transform: translateY(20px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        h1 {
+            color: #4a382c; /* Color de texto principal oscuro */
+            font-size: 2.8em;
+            margin-bottom: 20px;
+            font-weight: 700;
+        }
+
+        p {
+            font-size: 1.2em;
+            line-height: 1.6;
+            margin-bottom: 30px;
+            color: #6d5b4a; /* Tono de texto ligeramente más claro que el principal */
+        }
+
+        .button {
+            display: inline-block;
+            background-color: #87ceeb; /* Color azul cielo, como el agua */
+            color: white;
+            padding: 15px 30px;
+            border-radius: 50px;
+            text-decoration: none;
+            font-weight: 600;
+            font-size: 1.1em;
+            transition: background-color 0.3s ease, transform 0.3s ease;
+            box-shadow: 0 5px 15px rgba(135, 206, 235, 0.4); /* Sombra con el color del botón */
+        }
+
+        .button:hover {
+            background-color: #6a9acb; /* Azul un poco más oscuro al pasar el ratón */
+            transform: translateY(-3px);
+        }
+
+        .footer {
+            margin-top: 40px;
+            font-size: 0.9em;
+            color: #8b7463; /* Color de texto para el pie de página */
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Bienvenido !!!</h1>
+        <p> Estás en el lugar correcto para encontrar a tu amigo de 4 patas</p>
+        <a href="#" class="button">RESCATÁ</a>
+        <div class="footer">
+            &copy; 2025 Encontradog. Todos los perritos encontrados.
+        </div>
+    </div>
+</body>
+</html>

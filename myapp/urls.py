@@ -4,7 +4,7 @@ from django.urls import path
 from .views import landing
 
 urlpatterns = [
-    path('myapp/', landing),
+    path('myapp/landing', landing),
 ]
 
 #path('admin/', admin.site.urls),
