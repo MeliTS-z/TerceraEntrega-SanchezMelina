@@ -4,8 +4,9 @@ from django.urls import path
 from .views import landing, crear_amigo
 
 urlpatterns = [
-    path('myapp/landing', landing),
-    path('myapp/crear-amigo/<str:nombre>/', crear_amigo),
+    path('', landing, name='landing'),
+    #path('landing', landing),
+    path('crear-amigo/<str:nombre>/', crear_amigo),
 ]
 
 #path('admin/', admin.site.urls),

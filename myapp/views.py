@@ -3,8 +3,12 @@ from .models import Amigo
 from django.http import HttpResponse
 
 # Create your views here.
+
 def landing(request):
     return render(request, "myapp/landing.html")
+
+#def landing(request):
+    return render(request, "myapp/landing0.html")
 
 def crear_amigo(request, nombre):
     if nombre is not None:

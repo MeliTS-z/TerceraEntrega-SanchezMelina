@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{% block title %} Clasificadogs {% endblock %}</title>
+    <style>
+        /* Paleta de colores Capibara */
+        :root {
+            --color-capibara-fondo: #d2b48c; /* Tono arena/tierra */
+            --color-capibara-principal: #b8860b; /* Marrón suave (piel) */
+            --color-capibara-claro: #f5deb3; /* Beige claro (barriga) */
+            --color-coral: #FF6F61; /* Color coral */
+            --color-blanco: #FFFFFF;
+            --color-texto-oscuro: #4a382c;
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: var(--color-capibara-fondo); /* Fondo color capibara */
+            color: var(--color-texto-oscuro);
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+         
+        .header-bar {
+            width: 100%;
+            height: 2cm; /* 2 cm de alto */
+            background-color: var(--color-coral); /* Barra color coral */
+            display: flex;
+            align-items: center;
+            justify-content: space-between; /* Espacio entre los elementos */
+            padding: 0 20px; /* Un poco de padding horizontal */
+            box-sizing: border-box; /* Incluir padding en el ancho */
+        }
+
+        .header-text {
+            color: var(--color-blanco); /* Letras blancas */
+            font-size: 1.8em; /* Tamaño de fuente para el título */
+            font-weight: 700;
+            text-transform: uppercase;
+        }
+
+        .header-text.left {
+            margin-right: auto; /* Empuja el texto "Encontradog" a la izquierda */
+        }
+
+        .content-area {
+            flex-grow: 1; /* Permite que el área de contenido ocupe el espacio restante */
+            display: flex;
+            justify-content: center;
+            align-items: flex-start; /* Alinea el contenido al principio (arriba) */
+            padding: 40px 20px;
+            width: 90%;
+            max-width: 900px;
+        }
+
+        .main-card {
+            background-color: var(--color-capibara-claro); /* Fondo beige claro (barriga capibara) */
+            padding: 40px 60px;
+            border-radius: 15px;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+            text-align: center;
+            width: 100%;
+            border: 2px solid var(--color-capibara-principal); /* Borde sutil del color de piel */
+        }
+
+        h1 {
+            color: var(--color-texto-oscuro);
+            font-size: 2.5em;
+            margin-bottom: 20px;
+        }
+
+        p {
+            font-size: 1.1em;
+            line-height: 1.6;
+            margin-bottom: 30px;
+            color: var(--color-texto-oscuro);
+        }
+
+        .button {
+            display: inline-block;
+            background-color: var(--color-capibara-principal); /* Botón del color principal de capibara */
+            color: var(--color-blanco);
+            padding: 15px 30px;
+            border-radius: 50px;
+            text-decoration: none;
+            font-weight: 600;
+            font-size: 1.1em;
+            transition: background-color 0.3s ease, transform 0.3s ease;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+        }
+
+        .button:hover {
+            background-color: #a07008; /* Tono más oscuro al pasar el ratón */
+            transform: translateY(-3px);
+        }
+
+        .footer {
+            margin-top: 40px;
+            font-size: 0.9em;
+            color: var(--color-texto-oscuro);
+            padding-bottom: 20px;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="header-bar">
+        <span class="header-text left">Clasificadogs</span>
+        <span class="header-text center"></span>
+        </div>
+
+    <div class="content-area">
+        <div class="main-card">
+            <h1>¡Qué bueno que viniste!</h1>
+            <p>
+                Estás en el lugar correcto para encontrar a tu amigo de 4 patas
+            </p>
+            <p>
+                
+            </p>
+            <a href="#" class="button">ADOPTÁ</a>
+            <div class="footer">
+                &copy; 2025 Clasificadogs. Todos los perritos encontrados.
+            </div>
+        </div>
+    </div>
+
+</body>
+</html>
