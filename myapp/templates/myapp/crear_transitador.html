@@ -1,0 +1,15 @@
+{% extends "padre.html" %}
+
+{% block title %} Crear transitador {% endblock %}
+
+{% block content %}
+
+<h2> Crear transitador </h2>  
+<form method="POST">
+    {% csrf_token %}
+    {{ form.as_p }}
+    <button type="submit">Quiero recibir a un amigo en casa</button> 
+</form>
+
+
+{% endblock %}

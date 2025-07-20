@@ -1,1 +1,15 @@
-<h1>Perfil del amigo {{nombre}} compartido !</h1>
+{% extends "padre.html" %}
+
+{% block title %} Crear amigo {% endblock %}
+
+{% block content %}
+
+<h2> Crear amigo </h2>  
+<form method="POST">
+    {% csrf_token %}
+    {{ form.as_p }}
+    <button type="submit">Quiero ser adoptado</button> 
+</form>
+
+
+{% endblock %}
