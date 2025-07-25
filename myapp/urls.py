@@ -13,7 +13,7 @@ urlpatterns = [
     path('ofrecer-donacion/', ofrecer_donacion, name='ofrecer_donacion'),
     path('gracias-donacion/', grdonacion, name='grdonacion'),
     path('amigos/', amigo, name='amigo'),
-    path('amigos/buscar', buscar_amigos, name='buscar_amigos'),
+    path('buscar-amigos/', buscar_amigos, name='buscar_amigos'),
 
 ]
 
