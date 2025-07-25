@@ -1,0 +1,15 @@
+{% extends "padre.html" %}
+
+{% block title %} Ofrecer donación {% endblock %}
+
+{% block content %}
+
+<h2> Ofrecer donación (Por ejemplo alimento balanceado, abrigo, juguetes, remedios... No recibimos dinero.) </h2>  
+<form method="POST">
+    {% csrf_token %}
+    {{ form.as_p }}
+    <button type="submit">Deseo ser contactado para poder enviar donaciones a los amigos de 4 patas !</button> 
+</form>
+
+
+{% endblock %}

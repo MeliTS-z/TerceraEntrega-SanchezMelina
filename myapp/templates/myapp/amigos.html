@@ -1,0 +1,27 @@
+{% extends "padre.html" %}
+
+{% block title %} Crear amigo {% endblock %}
+
+{% block content %}
+
+<h2> Buscar amigos </h2>
+
+<form method="GET" action="{% url 'buscar_amigos'%}">
+    <input type="text" name="nombre" placeholder="Buscar amigos..." value="{{ nombre }}">
+    <button type="submit">Sorpréndanme</button> 
+</form>
+
+
+<h2>Amigos: </h2>
+
+<ul>
+    {% for Amigo in amigo %}
+    <li>{{Amigo.nombre}}</li>
+    {% empty %}
+    <li>No hay amigos buscando hogar en este momento, volvé pronto !</li>
+    {% endfor %}
+
+
+</ul>
+
+{% endblock %}
