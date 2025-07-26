@@ -14,11 +14,12 @@
 
 <h2>Amigos: </h2>
 
-<ul>
+<ul style="list-style-type: none;">
+
     {% for Amigo in amigo %}
-    <li>{{Amigo.nombre}}</li>
+    <li style=" text-align: center;">{{Amigo.nombre}}</li>
     {% empty %}
-    <li>No hay amigos buscando hogar en este momento, volvé pronto !</li>
+    <li style=" text-align: center;">No hay amigos buscando hogar en este momento, volvé pronto !</li>
     {% endfor %}
 
 

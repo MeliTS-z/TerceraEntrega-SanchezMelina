@@ -1,4 +1,7 @@
 from django.shortcuts import render, redirect
+from django.urls import reverse_lazy
+from django.views.generic import ListView, CreateView, UpdateView, DeleteView, DetailView
+
 from .models import Amigo, Transitador, Donacion
 from django.http import HttpResponse
 from .forms import AmigoForm, TransitadorForm, DonacionForm
@@ -85,13 +88,9 @@ def amigo(request):
     amigo = Amigo.objects.all()
     return render(request, 'myapp/amigos.html', {'amigo': amigo})
 
+
 def buscar_amigos(request):
         if request.method == 'GET':
             nombre = request.GET.get('nombre', '')
             amigo = Amigo.objects.filter(nombre__icontains=nombre)
-            return render(request, 'myapp/amigos.html', {'amigo': amigo}, {'nombre': nombre}) 
-        
-
-
-
-
+            return render(request, 'myapp/amigos.html', {'amigo': amigo, 'nombre': nombre})
