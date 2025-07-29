@@ -1,5 +1,3 @@
-{% load static %}
-
 <!DOCTYPE html>
 <html lang="en">
     <head>
@@ -7,7 +5,7 @@
         <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
         <meta name="description" content="" />
         <meta name="author" content="" />
-        <title>Clasificadogs</title>
+        <title>Clean Blog - Start Bootstrap Theme</title>
         <link rel="icon" type="image/x-icon" href="assets/favicon.ico" />
         <!-- Font Awesome icons (free version)-->
         <script src="https://use.fontawesome.com/releases/v6.3.0/js/all.js" crossorigin="anonymous"></script>
@@ -15,13 +13,13 @@
         <link href="https://fonts.googleapis.com/css?family=Lora:400,700,400italic,700italic" rel="stylesheet" type="text/css" />
         <link href="https://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,400,300,600,700,800" rel="stylesheet" type="text/css" />
         <!-- Core theme CSS (includes Bootstrap)-->
-        <link rel="stylesheet" href="{% static 'css/styles.css' %}" rel="stylesheet" />
+        <link href="css/styles.css" rel="stylesheet" />
     </head>
     <body>
         <!-- Navigation-->
         <nav class="navbar navbar-expand-lg navbar-light" id="mainNav">
             <div class="container px-4 px-lg-5">
-                <a class="navbar-brand" href="index.html">Dar amor</a>
+                <a class="navbar-brand" href="index.html">Start Bootstrap</a>
                 <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
                     Menu
                     <i class="fas fa-bars"></i>
@@ -42,9 +40,8 @@
                 <div class="row gx-4 gx-lg-5 justify-content-center">
                     <div class="col-md-10 col-lg-8 col-xl-7">
                         <div class="site-heading">
-                            <h1>Clasificadogs</h1>
-                            <span class="subheading">Estás en el lugar correcto para encontrar a tu amigo de 4 patas
-</span>
+                            <h1>Clean Blog</h1>
+                            <span class="subheading">A Blog Theme by Start Bootstrap</span>
                         </div>
                     </div>
                 </div>
@@ -143,7 +140,7 @@
                                 </a>
                             </li>
                         </ul>
-                        <div class="small text-center text-muted fst-italic">Clasificadogs 2025 &copy; Todos los perritos encontrados</div>
+                        <div class="small text-center text-muted fst-italic">Copyright &copy; Your Website 2023</div>
                     </div>
                 </div>
             </div>
@@ -154,54 +151,3 @@
         <script src="js/scripts.js"></script>
     </body>
 </html>
-
-{% comment %}<!DOCTYPE html>
-<html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="stylesheet" href="{% static 'css/styles.css' %}">
-  <title>Document</title>
-</head>
-<body>
-  
-</body>
-</html>{% endcomment %}
-
-
-{% comment %}<!DOCTYPE html>
-<html lang="es">
-<head>
-  <meta charset="UTF-8">
-  <title>{% block title %} Clasificadogs {% endblock %}</title>
-</head>
-<body style="margin: 0; font-family: Arial, sans-serif; background: #e8dbd0; color: #333;">
-
- {% block header %}
-  <!-- Encabezado -->
-  <header style="background-color: #D23B68; padding: 20px; text-align: left; color: white;">
-    <h1 style="margin: 0;"> ENCONTRADOG </h1>
-    <p style="margin: 0;">¡Qué bueno que viniste! Estás en el lugar correcto para encontrar a tu amigo de 4 patas</p>
-  </header>
-{% endblock %}
-  <!-- Contenido principal -->
-  <main style="padding: 40px; text-align: center;">
-    {% block content %}
-    <h2 style="color: #4CAF50;"> ADOPTÁ </h2>
-    <p style="max-width: 600px; margin: 0 auto 30px;">
-      Nuestro sitio te permitirá ponerte en contacto con otros amantes de los peluditos !
-    </p>
-    {% endblock %}
-    <!-- <a href="#servicios" style="display: inline-block; padding: 10px 20px; background-color: #4CAF50; color: white; text-decoration: none; border-radius: 5px;">
-      Ver más
-    </a> -->
-  </main>
-
-
-  <footer style="background-color: white; color: #D23B68; text-align: center; padding: 15px; margin-top: 40px;">
-    <p style="margin: 0;">&copy; 2025 Clasificadogs. Todos los perritos encontrados.
-</p>
-  </footer>
-
-</body>
-</html> {% endcomment %}
