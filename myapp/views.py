@@ -117,7 +117,25 @@ class SOSrefugioCreateView (CreateView):
     template_name = 'myapp/SOS_refugio.html'
     success_url = reverse_lazy('ayuda_en_camino')
 
+class SOSrefugioDetailView (DetailView):
+    model = SOSrefugio
+    template_name = 'myapp/detalle_listar_SOS.html'
+    context_object_name = 'detallelistaSOS'
+
 class SOSrefugioListView (ListView):
     model = SOSrefugio
     template_name = 'myapp/listar_SOS.html'
     context_object_name = 'listaSOS'
+
+class SOSrefugioUpdateView (UpdateView):
+    model = SOSrefugio
+    form_class = SOSrefugioForm
+    template_name = 'myapp/SOS_refugio.html'
+    success_url = reverse_lazy('lista_SOS')
+
+class SOSrefugioDeleteView (DeleteView):
+    model = SOSrefugio
+    template_name = 'myapp/eliminar_SOS_refugio.html'
+    success_url = reverse_lazy('lista_SOS')
+
+

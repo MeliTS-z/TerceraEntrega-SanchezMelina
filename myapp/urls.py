@@ -1,7 +1,7 @@
 from django.urls import path
 
 #include
-from .views import landing, crear_amigo, crear_transitador, gracias, ofrecer_donacion, grdonacion, buscar_amigos, amigo, buscar_transitadores, transitador, SOSrefugioCreateView, SOSrefugioListView, aec
+from .views import landing, crear_amigo, crear_transitador, gracias, ofrecer_donacion, grdonacion, buscar_amigos, amigo, buscar_transitadores, transitador, SOSrefugioCreateView, SOSrefugioListView, aec, SOSrefugioDetailView, SOSrefugioDeleteView, SOSrefugioUpdateView
 
 urlpatterns = [
     path('', landing, name='landing'),
@@ -18,7 +18,10 @@ urlpatterns = [
     path('buscar-transitadores/', buscar_transitadores, name='buscar_transitadores'),
     path('SOS-refugio/', SOSrefugioCreateView.as_view(), name='SOS_refugio'),
     path('lista-SOS/', SOSrefugioListView.as_view(), name='lista_SOS'),
-    path('ayuda-en-camino/', aec, name='ayuda_en_camino')
+    path('ayuda-en-camino/', aec, name='ayuda_en_camino'),
+    path('detalle-listar-SOS/<int:pk>', SOSrefugioDetailView.as_view(), name='detalle_listar_SOS'),
+    path('eliminar-SOS-refugio/<int:pk>', SOSrefugioDeleteView.as_view(), name='eliminar_SOS_refugio'),
+    path('editar-SOS-refugio/<int:pk>', SOSrefugioUpdateView.as_view(), name='editar_SOS_refugio')
 
 
 ]

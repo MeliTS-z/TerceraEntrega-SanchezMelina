@@ -4,12 +4,16 @@
 
 {% block content %}
 
-<h2>Lista de pedidos de ayuda de refugios, podés acercarlos a los locales de la "Red de ayuda mascotera" o coordinar un punto de encuentro en este sitio: </h2>
+<h2>Lista de pedidos de ayuda de refugios, podés acercarlos a los locales de la "Red de ayuda mascotera" o coordinar un punto de encuentro: </h2>
 
 <ul style="list-style-type: none;">
 
     {% for SOSrefugio in listaSOS %}
-    <li style=" text-align: center;">{{SOSrefugio.nombre}} - {{SOSrefugio.objeto_solicitado}}</li>
+    <li style=" text-align: center;">{{SOSrefugio.nombre}} - {{SOSrefugio.objeto_solicitado}} |
+    <a href="{% url 'detalle_listar_SOS' SOSrefugio.pk %}">Ver detalle -</a>
+    <a href="{% url 'editar_SOS_refugio' SOSrefugio.pk %}">Editar pedido -</a>
+    <a href="{% url 'eliminar_SOS_refugio' SOSrefugio.pk %}">Eliminar pedido</a>
+    </li>
     {% empty %}
     <li style=" text-align: center;">No hay refugios esperando donaciones en este momento !</li>
     {% endfor %}

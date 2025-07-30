@@ -1,0 +1,15 @@
+{% extends "padre.html" %}
+
+{% block title %} Eliminar SOS {% endblock %}
+
+{% block content %}
+
+<h1> Vas a eliminar un pedido SOS, ¿Es correcto? </h1>
+<p>{{ object.nombre }} - {{ object.objeto_solicitado}}</p>
+<form method="POST">
+    {% csrf_token %}
+    <button type="submit">Sí, emilinar</button>
+</form>
+<a href="{% url 'lista_SOS' %}">Cancelar</a>
+
+{% endblock %}
