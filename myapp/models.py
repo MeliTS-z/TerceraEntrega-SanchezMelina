@@ -33,4 +33,15 @@ class Donacion(models.Model):
 
     def __str__(self):
         return f"{self.nombre}"
+    
+    
+class SOSrefugio(models.Model):
+    nombre = models.CharField(max_length=100)
+    objeto_solicitado = models.CharField(max_length=200)
+    punto_de_encuentro = models.CharField(max_length=180)
+    dia_hora_preferencia = models.CharField(max_length=150)
+    email = models.EmailField()
+
+    def __str__(self):
+        return f"{self.nombre}"    
 

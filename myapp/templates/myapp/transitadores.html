@@ -1,0 +1,30 @@
+{% extends "padre.html" %}
+
+{% block title %} Crear transitador {% endblock %}
+
+{% block content %}
+
+<h2> Buscar transitadores </h2>
+
+<form method="GET" action="{% url 'buscar_transitadores'%}">
+    <input type="text" name="nombre" placeholder="Buscar transitadores..." value="{{ nombre }}">
+    <button type="submit">Sorpréndanme</button> 
+</form>
+
+
+<h2>Transitadores: </h2>
+
+<ul style="list-style-type: none;">
+
+    {% for Transitador in transitador %}
+    <li style=" text-align: center;">{{Transitador.nombre}}</li>
+    {% empty %}
+    <li style=" text-align: center;">No hay transitadores con el nombre indicado buscando amigos en este momento, pero podés probar con algo distinto !</li>
+    {% endfor %}
+
+
+</ul>
+
+<a href="{% url 'crear_transitador'%}">Crear transitador</a>
+
+{% endblock %}

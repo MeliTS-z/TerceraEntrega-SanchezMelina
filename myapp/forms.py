@@ -1,4 +1,5 @@
 from django import forms
+from .models import SOSrefugio
 
 
 class AmigoForm(forms.Form):
@@ -26,3 +27,8 @@ class DonacionForm(forms.Form):
 # class TutorForm(forms.Form):
 #     nombre = forms.CharField(label="Nombre", max_length=100)
 #     email = forms.EmailField()
+
+class SOSrefugioForm(forms.ModelForm):
+     class Meta:
+          model = SOSrefugio
+          fields = ['nombre', 'objeto_solicitado', 'punto_de_encuentro', 'dia_hora_preferencia', 'email']

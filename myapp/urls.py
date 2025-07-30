@@ -1,7 +1,7 @@
 from django.urls import path
 
 #include
-from .views import landing, crear_amigo, crear_transitador, gracias, ofrecer_donacion, grdonacion, buscar_amigos, amigo
+from .views import landing, crear_amigo, crear_transitador, gracias, ofrecer_donacion, grdonacion, buscar_amigos, amigo, buscar_transitadores, transitador, SOSrefugioCreateView, SOSrefugioListView, aec
 
 urlpatterns = [
     path('', landing, name='landing'),
@@ -14,6 +14,12 @@ urlpatterns = [
     path('gracias-donacion/', grdonacion, name='grdonacion'),
     path('amigos/', amigo, name='amigo'),
     path('buscar-amigos/', buscar_amigos, name='buscar_amigos'),
+    path('transitadores/', transitador, name='transitador'),
+    path('buscar-transitadores/', buscar_transitadores, name='buscar_transitadores'),
+    path('SOS-refugio/', SOSrefugioCreateView.as_view(), name='SOS_refugio'),
+    path('lista-SOS/', SOSrefugioListView.as_view(), name='lista_SOS'),
+    path('ayuda-en-camino/', aec, name='ayuda_en_camino')
+
 
 ]
 
