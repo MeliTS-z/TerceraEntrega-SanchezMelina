@@ -5,6 +5,8 @@ from django.views.generic import ListView, CreateView, UpdateView, DeleteView, D
 from .models import Amigo, Transitador, Donacion, SOSrefugio
 from django.http import HttpResponse
 from .forms import AmigoForm, TransitadorForm, DonacionForm, SOSrefugioForm
+from django.contrib.auth.decorators import login_required
+from django.contrib.auth.mixins import LoginRequiredMixin
 
 # Create your views here.
 
@@ -26,7 +28,7 @@ def landing(request):
 
 #     return render(request, "myapp/crear_amigo.html", {"nombre":nombre})    
 
-
+@login_required
 def crear_amigo(request):
     if request.method == 'POST':
         form = AmigoForm(request.POST)
@@ -45,7 +47,8 @@ def crear_amigo(request):
     else:
         form = AmigoForm()
         return render(request, 'myapp/crear_amigo.html', {'form': form})
-    
+
+@login_required    
 def crear_transitador(request):
     if request.method == 'POST':
         form = TransitadorForm(request.POST)
@@ -111,7 +114,7 @@ def buscar_transitadores(request):
             return render(request, 'myapp/transitadores.html', {'transitador': transitador, 'nombre': nombre})
 
 
-class SOSrefugioCreateView (CreateView):
+class SOSrefugioCreateView (LoginRequiredMixin, CreateView):
     model = SOSrefugio
     form_class = SOSrefugioForm
     template_name = 'myapp/SOS_refugio.html'
@@ -127,13 +130,13 @@ class SOSrefugioListView (ListView):
     template_name = 'myapp/listar_SOS.html'
     context_object_name = 'listaSOS'
 
-class SOSrefugioUpdateView (UpdateView):
+class SOSrefugioUpdateView (LoginRequiredMixin, UpdateView):
     model = SOSrefugio
     form_class = SOSrefugioForm
     template_name = 'myapp/SOS_refugio.html'
     success_url = reverse_lazy('lista_SOS')
 
-class SOSrefugioDeleteView (DeleteView):
+class SOSrefugioDeleteView (LoginRequiredMixin, DeleteView):
     model = SOSrefugio
     template_name = 'myapp/eliminar_SOS_refugio.html'
     success_url = reverse_lazy('lista_SOS')

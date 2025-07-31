@@ -17,7 +17,7 @@
 <ul style="list-style-type: none;">
 
     {% for Transitador in transitador %}
-    <li style=" text-align: center;">{{Transitador.nombre}}</li>
+    <li style=" text-align: center;">{{Transitador.nombre}} - {{Transitador.sobre_mi_hogar}}</li>
     {% empty %}
     <li style=" text-align: center;">No hay transitadores con el nombre indicado buscando amigos en este momento, pero podés probar con algo distinto !</li>
     {% endfor %}
