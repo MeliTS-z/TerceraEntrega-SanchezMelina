@@ -28,12 +28,18 @@
                 </button>
                 <div class="collapse navbar-collapse" id="navbarResponsive">
                     <ul class="navbar-nav ms-auto py-4 py-lg-0" style= "background-color: #D23B68">
+                        <li class="nav-item"><a class="nav-link px-lg-3 py-3 py-lg-4" href="{% url 'register' %}">Registrarme</a></li>
+                        <li class="nav-item"><a class="nav-link px-lg-3 py-3 py-lg-4" href="{% url 'login' %}">Ingresar</a></li>
                         <li class="nav-item"><a class="nav-link px-lg-3 py-3 py-lg-4" href="{% url 'amigo' %}">Amigos</a></li>
-                        <li class="nav-item"><a class="nav-link px-lg-3 py-3 py-lg-4" href="{% url 'transitador' %}">Transitadores</a></li>
-                        <li class="nav-item"><a class="nav-link px-lg-3 py-3 py-lg-4" href="{% url 'ofrecer_donacion' %}">Donaciones</a></li>
-                        <li class="nav-item"><a class="nav-link px-lg-3 py-3 py-lg-4" href="{% url 'SOS_refugio' %}">SOS refugio</a></li>
-                        <li class="nav-item"><a class="nav-link px-lg-3 py-3 py-lg-4" href="{% url 'lista_SOS' %}">Lista de pedidos</a></li>
-                        <li class="nav-item"><a class="nav-link px-lg-3 py-3 py-lg-4" href="contact.html">Sobre nosotros</a></li>
+                        <li class="nav-item"><a class="nav-link px-lg-3 py-3 py-lg-4" href="{% url 'transitador' %}">Transitar</a></li>
+                        <li class="nav-item"><a class="nav-link px-lg-3 py-3 py-lg-4" href="{% url 'ofrecer_donacion' %}">Donar</a></li>
+                        <li class="nav-item"><a class="nav-link px-lg-3 py-3 py-lg-4" href="{% url 'SOS_refugio' %}">S.O.S. refugio</a></li>
+                        <li class="nav-item"><a class="nav-link px-lg-3 py-3 py-lg-4" href="{% url 'lista_SOS' %}">Pedidos</a></li>
+                        <li class="nav-item"><form action="{% url 'logout' %}" method="POST">
+                            {% csrf_token %}
+                            <button type="submit" class="btn btn-primary">Salir</button>
+                        </form>
+                        </li>
                     </ul>
                 </div>
             </div>
@@ -46,7 +52,7 @@
                     <div class="col-md-10 col-lg-8 col-xl-7">
                         <div class="site-heading">
                             <h1>Clasificadogs</h1>
-                            <span class="subheading">Estás en el lugar correcto para encontrar a tu amigo de 4 patas
+                            <span class="subheading">Bienvenido {{user.username}}! Estás en el lugar correcto para encontrar a tu amigo de 4 patas...
 </span>
                         </div>
                     </div>
