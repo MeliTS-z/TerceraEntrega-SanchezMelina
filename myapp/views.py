@@ -141,4 +141,7 @@ class SOSrefugioDeleteView (LoginRequiredMixin, DeleteView):
     template_name = 'myapp/eliminar_SOS_refugio.html'
     success_url = reverse_lazy('lista_SOS')
 
+def about(request):
+    return render(request, "myapp/about.html")    
+
 

@@ -3,6 +3,16 @@
 {% block title %} Crear amigo {% endblock %}
 
 {% block content %}
+<br>
+<br>
+<div style="border: 4px solid rgb(83, 4, 4); padding: 20px; background-color: #ddceba;">
+<p class="subheading" style="font-size: 23px;">En este apartado publicamos las principales características de los perros en espera.</p>
+<p class="subheading" style="font-size: 23px;">Si tenés interés por alguno podés informarlo en TRANSITAR.</p>
+<p class="subheading" style="font-size: 23px;">También podés publicar algún amigo que tengas actualmente en tránsito.</p>
+
+</div>
+<br>
+<br>
 
 <h2> Buscar amigos </h2>
 
@@ -12,12 +22,14 @@
 </form>
 
 
+
 <h2>Amigos: </h2>
 
 <ul style="list-style-type: none;">
 
     {% for Amigo in amigo %}
-    <li style=" text-align: center;">{{Amigo.nombre}} - {{Amigo.descripcion}}</li>
+    <li style=" text-align: center;">{{Amigo.nombre}} - Fec. nac. aprox. {{Amigo.fecha_nacimiento_estimada}} - {{Amigo.descripcion}}</a>
+</li>
     {% empty %}
     <li style=" text-align: center;">No hay amigos con el nombre indicado buscando hogar en este momento, pero podés probar con algo distinto !</li>
     {% endfor %}
